@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi feet va meter</title>
+</head>
+<h1>chuyen doi feet sang meter</h1>
+<input id="hienThi" type="text"><br><br>
+<select id="chuyenDoi" >
+  <option>
+    menter feet
+  </option>
+  <option>
+    feet menter
+  </option>
+</select>
+<button onclick="nhapVao()">tinh</button>
+<h2 id="ketQua"></h2>
+<!--<h1> chuyen doi meter sang feet</h1>-->
+<!--<input id="hienThi1" type="text"><br><br>-->
+<!--<button onclick="nhapVao1()">tinh</button>-->
+<!--<h2 id="ketQua1"></h2>-->
+
+<body>
+<script>
+  function nhapVao() {
+    let feet = document.getElementById('hienThi').value;
+    console.log(feet)
+    let fot = document.getElementById('chuyenDoi').value;
+    console.log(fot)
+    if (fot === "menter feet") {
+      menter = 0.305 * feet
+       document.getElementById('ketQua').innerHTML= menter
+    } else if (fot === "feet menter") {
+      men = 3.279 * feet
+      document.getElementById('ketQua').innerHTML = men
+    }
+  }
+
+  //   document.getElementById('ketQua').innerHTML = 'so ban doi duoc la: ' + menter
+  // }
+  // function nhapVao1(){
+  //   let menter = +document.getElementById('hienThi1').value;
+  //   foot = 3.279 * menter
+  //   document.getElementById('ketQua1').innerHTML = 'so ban doi duoc la: ' + foot
+  // }
+</script>
+
+</body>
+</html>

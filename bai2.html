@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        background: aquamarine;
+    }
+    h1{
+        text-align: center;
+        color: blueviolet;
+    }
+    input {
+        margin-left: 600px;
+        background-color: gainsboro;
+    }
+    button {
+        margin-left: 670px;
+        background-color: rosybrown;
+    }
+
+</style>
+<body>
+<h1>chuyen doi feet sang menter </h1>
+<input id="kiemtra" type="text"><br><br>
+<button onclick="chuyenDoiSoMeter()">Doi</button>
+<br>
+<h1 id="ketQua"></h1><br>
+<h1>chuyen doi merer sang feet</h1>
+<input id="kiemtra1" type="text"><br><br>
+<button onclick="chuyenDoiSoFoot()">Doi</button>
+<h1 id="ketqua1"></h1>
+<script>
+    let menTer
+    let foot
+
+    function chuyenDoiSoMeter() {
+        let foot = +document.getElementById('kiemtra').value;
+        menTer = 0.305 * foot
+
+        document.getElementById('ketQua').innerHTML = 'số bạn đổi được là:' + menTer
+    }
+
+    function chuyenDoiSoFoot() {
+        let menTer = +document.getElementById('kiemtra1').value;
+        foot = 3.279 * menTer
+
+        document.getElementById('ketqua1').innerHTML = 'số bạn đổi được là:' + foot
+    }
+
+</script>
+</body>
+</html>
